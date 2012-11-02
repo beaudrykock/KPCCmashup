@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AudioPlayerViewController.h"
+#import "BWCOnDemandViewController.h"
+#import "BWCArticleViewController.h"
 @interface BWCViewController : UIViewController
 
 @end

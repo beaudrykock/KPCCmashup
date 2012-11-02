@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BWCOnDemandViewController : UICollectionViewController
+@interface BWCOnDemandViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end

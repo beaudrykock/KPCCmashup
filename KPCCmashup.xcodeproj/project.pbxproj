@@ -18,6 +18,24 @@
 		9F4412FC163D9E5C00F3C645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F4412FB163D9E5C00F3C645 /* Default-568h@2x.png */; };
 		9F4412FF163D9E5C00F3C645 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F4412FD163D9E5C00F3C645 /* MainStoryboard.storyboard */; };
 		9F441302163D9E5C00F3C645 /* BWCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F441301163D9E5C00F3C645 /* BWCViewController.m */; };
+		9F5D20A5164411EC0070A450 /* BWCArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20A3164411EC0070A450 /* BWCArticleViewController.m */; };
+		9F5D20A6164411EC0070A450 /* BWCArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20A4164411EC0070A450 /* BWCArticleViewController.xib */; };
+		9F5D20B91644310F0070A450 /* AudioPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20B61644310F0070A450 /* AudioPlayerViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F5D20BA1644310F0070A450 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20B81644310F0070A450 /* AudioStreamer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F5D20BC1644315F0070A450 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5D20BB1644315F0070A450 /* CFNetwork.framework */; };
+		9F5D20C2164431950070A450 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5D20C1164431950070A450 /* CoreMedia.framework */; };
+		9F5D20C41644319A0070A450 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5D20C31644319A0070A450 /* AVFoundation.framework */; };
+		9F5D20C6164431A50070A450 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5D20C5164431A50070A450 /* AudioToolbox.framework */; };
+		9F5D20C9164431EE0070A450 /* UIDevice-Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20C8164431EE0070A450 /* UIDevice-Hardware.m */; };
+		9F5D20CB1644329C0070A450 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5D20CA1644329C0070A450 /* SystemConfiguration.framework */; };
+		9F5D20CD164432BB0070A450 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5D20CC164432BB0070A450 /* QuartzCore.framework */; };
+		9F5D20CF164432E80070A450 /* AudioPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20CE164432E80070A450 /* AudioPlayerView.xib */; };
+		9F5D20D4164432FE0070A450 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D0164432FE0070A450 /* pausebutton.png */; };
+		9F5D20D5164432FE0070A450 /* pausebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D1164432FE0070A450 /* pausebutton@2x.png */; };
+		9F5D20D6164432FE0070A450 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D2164432FE0070A450 /* playbutton.png */; };
+		9F5D20D7164432FE0070A450 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D3164432FE0070A450 /* playbutton@2x.png */; };
+		9F5D20E01644366D0070A450 /* BWCOnDemandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */; };
+		9F5D20E11644366D0070A450 /* BWCOnDemandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +55,29 @@
 		9F4412FE163D9E5C00F3C645 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9F441300163D9E5C00F3C645 /* BWCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWCViewController.h; sourceTree = "<group>"; };
 		9F441301163D9E5C00F3C645 /* BWCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWCViewController.m; sourceTree = "<group>"; };
+		9F5D20A2164411EC0070A450 /* BWCArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCArticleViewController.h; sourceTree = "<group>"; };
+		9F5D20A3164411EC0070A450 /* BWCArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCArticleViewController.m; sourceTree = "<group>"; };
+		9F5D20A4164411EC0070A450 /* BWCArticleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCArticleViewController.xib; sourceTree = "<group>"; };
+		9F5D20B51644310F0070A450 /* AudioPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerViewController.h; sourceTree = "<group>"; };
+		9F5D20B61644310F0070A450 /* AudioPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerViewController.m; sourceTree = "<group>"; };
+		9F5D20B71644310F0070A450 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		9F5D20B81644310F0070A450 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		9F5D20BB1644315F0070A450 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9F5D20C1164431950070A450 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9F5D20C31644319A0070A450 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9F5D20C5164431A50070A450 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9F5D20C7164431EE0070A450 /* UIDevice-Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice-Hardware.h"; sourceTree = "<group>"; };
+		9F5D20C8164431EE0070A450 /* UIDevice-Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice-Hardware.m"; sourceTree = "<group>"; };
+		9F5D20CA1644329C0070A450 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9F5D20CC164432BB0070A450 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9F5D20CE164432E80070A450 /* AudioPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioPlayerView.xib; sourceTree = "<group>"; };
+		9F5D20D0164432FE0070A450 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
+		9F5D20D1164432FE0070A450 /* pausebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausebutton@2x.png"; sourceTree = "<group>"; };
+		9F5D20D2164432FE0070A450 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		9F5D20D3164432FE0070A450 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
+		9F5D20DD1644366C0070A450 /* BWCOnDemandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCOnDemandViewController.h; sourceTree = "<group>"; };
+		9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCOnDemandViewController.m; sourceTree = "<group>"; };
+		9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCOnDemandViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +85,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5D20CD164432BB0070A450 /* QuartzCore.framework in Frameworks */,
+				9F5D20CB1644329C0070A450 /* SystemConfiguration.framework in Frameworks */,
+				9F5D20C6164431A50070A450 /* AudioToolbox.framework in Frameworks */,
+				9F5D20C41644319A0070A450 /* AVFoundation.framework in Frameworks */,
+				9F5D20C2164431950070A450 /* CoreMedia.framework in Frameworks */,
+				9F5D20BC1644315F0070A450 /* CFNetwork.framework in Frameworks */,
 				9F4412E6163D9E5C00F3C645 /* UIKit.framework in Frameworks */,
 				9F4412E8163D9E5C00F3C645 /* Foundation.framework in Frameworks */,
 				9F4412EA163D9E5C00F3C645 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +103,8 @@
 		9F4412D6163D9E5C00F3C645 = {
 			isa = PBXGroup;
 			children = (
+				9F5D20CC164432BB0070A450 /* QuartzCore.framework */,
+				9F5D20CA1644329C0070A450 /* SystemConfiguration.framework */,
 				9F4412EB163D9E5C00F3C645 /* KPCCmashup */,
 				9F4412E4163D9E5C00F3C645 /* Frameworks */,
 				9F4412E2163D9E5C00F3C645 /* Products */,
@@ -73,6 +122,10 @@
 		9F4412E4163D9E5C00F3C645 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F5D20C5164431A50070A450 /* AudioToolbox.framework */,
+				9F5D20C31644319A0070A450 /* AVFoundation.framework */,
+				9F5D20C1164431950070A450 /* CoreMedia.framework */,
+				9F5D20BB1644315F0070A450 /* CFNetwork.framework */,
 				9F4412E5163D9E5C00F3C645 /* UIKit.framework */,
 				9F4412E7163D9E5C00F3C645 /* Foundation.framework */,
 				9F4412E9163D9E5C00F3C645 /* CoreGraphics.framework */,
@@ -86,8 +139,10 @@
 				9F4412F4163D9E5C00F3C645 /* BWCAppDelegate.h */,
 				9F4412F5163D9E5C00F3C645 /* BWCAppDelegate.m */,
 				9F4412FD163D9E5C00F3C645 /* MainStoryboard.storyboard */,
-				9F441300163D9E5C00F3C645 /* BWCViewController.h */,
-				9F441301163D9E5C00F3C645 /* BWCViewController.m */,
+				9F5D20E216443A260070A450 /* View Controllers */,
+				9F5D20E316443A300070A450 /* Models */,
+				9F5D20E416443A3A0070A450 /* Utilities */,
+				9F5D20AD164412030070A450 /* Xibs */,
 				9F4412EC163D9E5C00F3C645 /* Supporting Files */,
 			);
 			path = KPCCmashup;
@@ -96,6 +151,7 @@
 		9F4412EC163D9E5C00F3C645 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9F5D20E516443A470070A450 /* Resources */,
 				9F4412ED163D9E5C00F3C645 /* KPCCmashup-Info.plist */,
 				9F4412EE163D9E5C00F3C645 /* InfoPlist.strings */,
 				9F4412F1163D9E5C00F3C645 /* main.m */,
@@ -105,6 +161,68 @@
 				9F4412FB163D9E5C00F3C645 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F5D20AD164412030070A450 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D20A4164411EC0070A450 /* BWCArticleViewController.xib */,
+				9F5D20CE164432E80070A450 /* AudioPlayerView.xib */,
+				9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		9F5D20D8164433060070A450 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D20D0164432FE0070A450 /* pausebutton.png */,
+				9F5D20D1164432FE0070A450 /* pausebutton@2x.png */,
+				9F5D20D2164432FE0070A450 /* playbutton.png */,
+				9F5D20D3164432FE0070A450 /* playbutton@2x.png */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		9F5D20E216443A260070A450 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F441300163D9E5C00F3C645 /* BWCViewController.h */,
+				9F441301163D9E5C00F3C645 /* BWCViewController.m */,
+				9F5D20DD1644366C0070A450 /* BWCOnDemandViewController.h */,
+				9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */,
+				9F5D20A2164411EC0070A450 /* BWCArticleViewController.h */,
+				9F5D20A3164411EC0070A450 /* BWCArticleViewController.m */,
+				9F5D20B51644310F0070A450 /* AudioPlayerViewController.h */,
+				9F5D20B61644310F0070A450 /* AudioPlayerViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9F5D20E316443A300070A450 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D20B71644310F0070A450 /* AudioStreamer.h */,
+				9F5D20B81644310F0070A450 /* AudioStreamer.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9F5D20E416443A3A0070A450 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D20C7164431EE0070A450 /* UIDevice-Hardware.h */,
+				9F5D20C8164431EE0070A450 /* UIDevice-Hardware.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		9F5D20E516443A470070A450 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F5D20D8164433060070A450 /* Buttons */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +282,13 @@
 				9F4412FA163D9E5C00F3C645 /* Default@2x.png in Resources */,
 				9F4412FC163D9E5C00F3C645 /* Default-568h@2x.png in Resources */,
 				9F4412FF163D9E5C00F3C645 /* MainStoryboard.storyboard in Resources */,
+				9F5D20A6164411EC0070A450 /* BWCArticleViewController.xib in Resources */,
+				9F5D20CF164432E80070A450 /* AudioPlayerView.xib in Resources */,
+				9F5D20D4164432FE0070A450 /* pausebutton.png in Resources */,
+				9F5D20D5164432FE0070A450 /* pausebutton@2x.png in Resources */,
+				9F5D20D6164432FE0070A450 /* playbutton.png in Resources */,
+				9F5D20D7164432FE0070A450 /* playbutton@2x.png in Resources */,
+				9F5D20E11644366D0070A450 /* BWCOnDemandViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +302,11 @@
 				9F4412F2163D9E5C00F3C645 /* main.m in Sources */,
 				9F4412F6163D9E5C00F3C645 /* BWCAppDelegate.m in Sources */,
 				9F441302163D9E5C00F3C645 /* BWCViewController.m in Sources */,
+				9F5D20A5164411EC0070A450 /* BWCArticleViewController.m in Sources */,
+				9F5D20B91644310F0070A450 /* AudioPlayerViewController.m in Sources */,
+				9F5D20BA1644310F0070A450 /* AudioStreamer.m in Sources */,
+				9F5D20C9164431EE0070A450 /* UIDevice-Hardware.m in Sources */,
+				9F5D20E01644366D0070A450 /* BWCOnDemandViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,6 +425,7 @@
 				9F441307163D9E5C00F3C645 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
