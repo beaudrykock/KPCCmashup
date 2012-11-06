@@ -24,6 +24,11 @@
 	IBOutlet UISlider *progressSlider;
 	AudioStreamer *streamer;
 	NSTimer *progressUpdateTimer;
+    IBOutlet UILabel *metadataArtist;
+	IBOutlet UILabel *metadataTitle;
+	IBOutlet UILabel *metadataAlbum;
+    double playDuration;
+    BOOL playing;
 }
 
 @property (nonatomic, copy) NSString *downloadSourceURL;
@@ -39,6 +44,7 @@
 - (IBAction)sliderMoved:(UISlider *)aSlider;
 - (void)destroyStreamer;
 -(void)closeAudioViewContainer;
+- (void)metadataChanged:(NSNotification *)aNotification;
 
 @end
 

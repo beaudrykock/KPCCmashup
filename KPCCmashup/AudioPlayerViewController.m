@@ -74,6 +74,9 @@
 		[streamer stop];
 		[streamer release];
 		streamer = nil;
+        playing = NO;
+        playDuration = 0.0;
+        [metadataAlbum setText:@""];
 	}
 }
 
@@ -134,7 +137,9 @@
 	}
 
 	[self destroyStreamer];
-	
+
+	self.downloadSourceURL = @"http://kpcc.streamguys.com/";
+    
 	NSString *escapedValue =
 		[(NSString *)CFURLCreateStringByAddingPercentEscapes(
 			nil,
@@ -179,7 +184,10 @@
 	//[volumeView sizeToFit];
 	
 	[self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
-
+    self.view.layer.cornerRadius = 8.0;
+    [metadataArtist setText:@"KPCC.org"];
+    [progressSlider setValue:100.0];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -223,7 +231,7 @@
 	CABasicAnimation *animation;
 	animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
 	animation.fromValue = [NSNumber numberWithFloat:0.0];
-	animation.toValue = [NSNumber numberWithFloat:2 * M_PI];
+	animation.toValue = [NSNumber numberWithFloat:M_PI];
 	animation.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionLinear];
 	animation.delegate = self;
 	[button.layer addAnimation:animation forKey:@"rotationAnimation"];
@@ -263,6 +271,8 @@
 {
 	if ([button.currentImage isEqual:[UIImage imageNamed:@"playbutton.png"]])
 	{
+        [metadataAlbum setText:@"All Things Considered"];
+        playing = YES;
 		[self createStreamer];
 		[self setButtonImage:[UIImage imageNamed:@"loadingbutton.png"]];
 		[streamer start];
@@ -270,7 +280,10 @@
 	else if ([button.currentImage isEqual:[UIImage imageNamed:@"pausebutton.png"]])
 	{
         [self setButtonImage:[UIImage imageNamed:@"playbutton.png"]];
+        playing = NO;
 		[streamer pause];
+        [metadataAlbum setText:@"All Things Considered"];
+        
 	}
 }
 
@@ -325,8 +338,20 @@
 //
 - (void)updateProgress:(NSTimer *)updatedTimer
 {
+    
 	if (streamer.bitRate != 0.0)
 	{
+        if (playing)
+        {
+            playDuration += updatedTimer.timeInterval;
+            
+            NSUInteger h, m, s;
+            h = ((NSUInteger)(playDuration / 60)) / 60;
+            m = ((NSUInteger)(playDuration / 60)) % 60;
+            s = ((NSUInteger)(playDuration)) % 60;
+            [elapsedLabel setText:[NSString stringWithFormat:@"%d:%02d:%02d", h, m, s]];
+        }
+        /*
 		double progress = streamer.progress;
 		double duration = streamer.duration;
 		
@@ -357,14 +382,71 @@
 		{
 			[progressSlider setEnabled:NO];
 		}
+         */
 	}
 	else
 	{
-		elapsedLabel.text = @"00:00";
-        remainingLabel.text = @"00:00";
+		elapsedLabel.text = @"00:00:00";
+        remainingLabel.text = @"00:00:00";
 	}
 }
 
+#ifdef SHOUTCAST_METADATA
+/** Example metadata
+ *
+ StreamTitle='Kim Sozzi / Amuka / Livvi Franc - Secret Love / It's Over / Automatik',
+ StreamUrl='&artist=Kim%20Sozzi%20%2F%20Amuka%20%2F%20Livvi%20Franc&title=Secret%20Love%20%2F%20It%27s%20Over%20%2F%20Automatik&album=&duration=1133453&songtype=S&overlay=no&buycd=&website=&picture=',
+ 
+ Format is generally "Artist hypen Title" although servers may deliver only one. This code assumes 1 field is artist.
+ */
+- (void)metadataChanged:(NSNotification *)aNotification
+{
+	NSString *streamArtist;
+	NSString *streamTitle;
+	NSString *streamAlbum;
+    //NSLog(@"Raw meta data = %@", [[aNotification userInfo] objectForKey:@"metadata"]);
+    
+	NSArray *metaParts = [[[aNotification userInfo] objectForKey:@"metadata"] componentsSeparatedByString:@";"];
+	NSString *item;
+	NSMutableDictionary *hash = [[NSMutableDictionary alloc] init];
+	for (item in metaParts) {
+		// split the key/value pair
+		NSArray *pair = [item componentsSeparatedByString:@"="];
+		// don't bother with bad metadata
+		if ([pair count] == 2)
+			[hash setObject:[pair objectAtIndex:1] forKey:[pair objectAtIndex:0]];
+	}
+    
+	// do something with the StreamTitle
+	NSString *streamString = [[hash objectForKey:@"StreamTitle"] stringByReplacingOccurrencesOfString:@"'" withString:@""];
+	
+	NSArray *streamParts = [streamString componentsSeparatedByString:@" - "];
+	if ([streamParts count] > 0) {
+		streamArtist = [streamParts objectAtIndex:0];
+	} else {
+		streamArtist = @"";
+	}
+	// this looks odd but not every server will have all artist hyphen title
+	if ([streamParts count] >= 2) {
+		streamTitle = [streamParts objectAtIndex:1];
+		if ([streamParts count] >= 3) {
+			streamAlbum = [streamParts objectAtIndex:2];
+		} else {
+			streamAlbum = @"N/A";
+		}
+	} else {
+		streamTitle = @"";
+		streamAlbum = @"";
+	}
+	NSLog(@"%@ by %@ from %@", streamTitle, streamArtist, streamAlbum);
+    
+	// only update the UI if in foreground
+	metadataArtist.text = streamArtist;
+    
+	self.currentArtist = streamArtist;
+	self.currentTitle = streamTitle;
+}
+#endif
 
 //
 // dealloc
