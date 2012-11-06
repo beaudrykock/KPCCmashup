@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PinchLayout.h"
 
-@interface BWCOnDemandViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
-
-@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@interface BWCOnDemandViewController : UICollectionViewController
 
 @end

@@ -41,6 +41,11 @@
 		9F6EAC821649A10100F0A878 /* KPCC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC811649A10100F0A878 /* KPCC_logo.png */; };
 		9F6EAC851649A3B300F0A878 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC831649A3B300F0A878 /* loadingbutton.png */; };
 		9F6EAC861649A3B300F0A878 /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC841649A3B300F0A878 /* loadingbutton@2x.png */; };
+		9F6EAC911649A78000F0A878 /* PinchLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EAC901649A78000F0A878 /* PinchLayout.m */; };
+		9F6EAC991649ABB000F0A878 /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F6EAC981649ABB000F0A878 /* Cell.m */; };
+		9F6EACA11649B16A00F0A878 /* item_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC9E1649B16A00F0A878 /* item_1.png */; };
+		9F6EACA21649B16A00F0A878 /* item_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC9F1649B16A00F0A878 /* item_2.png */; };
+		9F6EACA31649B16A00F0A878 /* item_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EACA01649B16A00F0A878 /* item_3.png */; };
 		E4E35D521648C40C00ECACEC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D3D1648C40C00ECACEC /* SDImageCache.m */; };
 		E4E35D531648C40C00ECACEC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D411648C40C00ECACEC /* SDWebImageDecoder.m */; };
 		E4E35D541648C40C00ECACEC /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D431648C40C00ECACEC /* SDWebImageDownloader.m */; };
@@ -101,6 +106,13 @@
 		9F6EAC811649A10100F0A878 /* KPCC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KPCC_logo.png; sourceTree = "<group>"; };
 		9F6EAC831649A3B300F0A878 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
 		9F6EAC841649A3B300F0A878 /* loadingbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingbutton@2x.png"; sourceTree = "<group>"; };
+		9F6EAC8F1649A78000F0A878 /* PinchLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinchLayout.h; sourceTree = "<group>"; };
+		9F6EAC901649A78000F0A878 /* PinchLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinchLayout.m; sourceTree = "<group>"; };
+		9F6EAC971649ABB000F0A878 /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		9F6EAC981649ABB000F0A878 /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		9F6EAC9E1649B16A00F0A878 /* item_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_1.png; sourceTree = "<group>"; };
+		9F6EAC9F1649B16A00F0A878 /* item_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_2.png; sourceTree = "<group>"; };
+		9F6EACA01649B16A00F0A878 /* item_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = item_3.png; sourceTree = "<group>"; };
 		E4E35D3C1648C40C00ECACEC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = External/SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		E4E35D3D1648C40C00ECACEC /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = External/SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		E4E35D3E1648C40C00ECACEC /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCacheDelegate.h; path = External/SDWebImage/SDImageCacheDelegate.h; sourceTree = "<group>"; };
@@ -266,6 +278,10 @@
 		9F5D20E316443A300070A450 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9F6EAC971649ABB000F0A878 /* Cell.h */,
+				9F6EAC981649ABB000F0A878 /* Cell.m */,
+				9F6EAC8F1649A78000F0A878 /* PinchLayout.h */,
+				9F6EAC901649A78000F0A878 /* PinchLayout.m */,
 				9F5D20B71644310F0070A450 /* AudioStreamer.h */,
 				9F5D20B81644310F0070A450 /* AudioStreamer.m */,
 			);
@@ -284,6 +300,9 @@
 		9F5D20E516443A470070A450 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F6EAC9E1649B16A00F0A878 /* item_1.png */,
+				9F6EAC9F1649B16A00F0A878 /* item_2.png */,
+				9F6EACA01649B16A00F0A878 /* item_3.png */,
 				9F6EAC811649A10100F0A878 /* KPCC_logo.png */,
 				9F6EAC7C1649818700F0A878 /* Launch images */,
 				9F5D20D8164433060070A450 /* Buttons */,
@@ -444,6 +463,9 @@
 				9F6EAC821649A10100F0A878 /* KPCC_logo.png in Resources */,
 				9F6EAC851649A3B300F0A878 /* loadingbutton.png in Resources */,
 				9F6EAC861649A3B300F0A878 /* loadingbutton@2x.png in Resources */,
+				9F6EACA11649B16A00F0A878 /* item_1.png in Resources */,
+				9F6EACA21649B16A00F0A878 /* item_2.png in Resources */,
+				9F6EACA31649B16A00F0A878 /* item_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +496,8 @@
 				E4E35D7D1648C8F200ECACEC /* MWFeedInfo.m in Sources */,
 				E4E35D7E1648C8F200ECACEC /* MWFeedItem.m in Sources */,
 				E4E35D7F1648C8F200ECACEC /* MWFeedParser.m in Sources */,
+				9F6EAC911649A78000F0A878 /* PinchLayout.m in Sources */,
+				9F6EAC991649ABB000F0A878 /* Cell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +581,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KPCCmashup/KPCCmashup-Prefix.pch";
 				INFOPLIST_FILE = "KPCCmashup/KPCCmashup-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -568,6 +593,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KPCCmashup/KPCCmashup-Prefix.pch";
 				INFOPLIST_FILE = "KPCCmashup/KPCCmashup-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

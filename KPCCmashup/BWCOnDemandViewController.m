@@ -7,6 +7,7 @@
 //
 
 #import "BWCOnDemandViewController.h"
+#import "Cell.h"
 
 @interface BWCOnDemandViewController ()
 
@@ -28,7 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"OnDemandItemCell"];
+    [self.collectionView registerClass:[Cell class] forCellWithReuseIdentifier:@"MY_CELL"];
+    
+    UIPinchGestureRecognizer* pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinchGesture:)];
+    [self.collectionView addGestureRecognizer:pinchRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,50 +41,81 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UICollectionView Datasource
-// 1
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return 24;
 }
-// 2
-- (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView {
-    return 1;
-}
-// 3
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"OnDemandItemCell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
+    Cell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"MY_CELL" forIndexPath:indexPath];
+    [cell.label setText:[self getTextForIndexPath:indexPath]];
+    [cell.image setImage:[self getImageForIndexPath:indexPath]];
     return cell;
 }
-// 4
-/*- (UICollectionReusableView *)collectionView:
- (UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
- {
- return [[UICollectionReusableView alloc] init];
- }*/
 
-#pragma mark - UICollectionViewDelegate
+-(NSString*)getTextForIndexPath:(NSIndexPath*)indexPath
+{
+    if (indexPath.row % 2 ==0)
+    {
+        return @"Take Two";
+    }
+    if (indexPath.row % 3 ==0)
+    {
+        return @"Air Talk";
+    }
+    else
+    {
+        return @"Off Ramp";
+    }
+}
+
+-(UIImage*)getImageForIndexPath:(NSIndexPath*)indexPath
+{
+    if (indexPath.row % 2 ==0)
+    {
+        return [UIImage imageNamed:@"item_1.png"];
+    }
+    if (indexPath.row % 3 ==0)
+    {
+        return [UIImage imageNamed:@"item_2.png"];
+    }
+    else
+    {
+        return [UIImage imageNamed:@"item_3.png"];
+    }
+}
+
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO: Select Item
-}
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Deselect item
+    NSLog(@"selected");
 }
 
-#pragma mark – UICollectionViewDelegateFlowLayout
 
-// 1
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+#pragma mark - Pinching
+- (void)handlePinchGesture:(UIPinchGestureRecognizer *)sender
+{
+    PinchLayout* pinchLayout = (PinchLayout*)self.collectionView.collectionViewLayout;
     
-    CGSize retval = CGSizeMake(100, 100);
-    return retval;
-}
-
-// 3
-- (UIEdgeInsets)collectionView:
-(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    return UIEdgeInsetsMake(50, 20, 50, 20);
+    if (sender.state == UIGestureRecognizerStateBegan)
+    {
+        CGPoint initialPinchPoint = [sender locationInView:self.collectionView];
+        NSIndexPath* pinchedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
+        pinchLayout.pinchedCellPath = pinchedCellPath;
+        
+    }
+    
+    else if (sender.state == UIGestureRecognizerStateChanged)
+    {
+        pinchLayout.pinchedCellScale = sender.scale;
+        pinchLayout.pinchedCellCenter = [sender locationInView:self.collectionView];
+    }
+    
+    else
+    {
+        [self.collectionView performBatchUpdates:^{
+            pinchLayout.pinchedCellPath = nil;
+            pinchLayout.pinchedCellScale = 1.0;
+        } completion:nil];
+    }
 }
 
 @end

@@ -56,20 +56,23 @@
     [apvc didMoveToParentViewController:self];
     
     // ON-DEMAND COLLECTION VIEW
-    /*
-    BWCOnDemandViewController *bodvc = [[BWCOnDemandViewController alloc] init];
+    
+    PinchLayout* pinchLayout = [[PinchLayout alloc] init];
+    pinchLayout.itemSize = CGSizeMake(150.0, 150.0);
+    BWCOnDemandViewController *bodvc = [[BWCOnDemandViewController alloc] initWithCollectionViewLayout:pinchLayout];
     
     [self addChildViewController:bodvc];
     
     frame = bodvc.view.frame;
     frame.origin.x = 0.0;
-    frame.origin.y = self.view.frame.size.height-bodvc.view.frame.size.height;
+    frame.size.height = 300.0;
+    frame.origin.y = self.view.frame.size.height-frame.size.height;
     bodvc.view.frame = frame;
     
     [self.view addSubview:bodvc.view];
     
     [bodvc didMoveToParentViewController:self];
-    
+    /*
     // ARTICLE VIEW
     BWCArticleViewController *bavc = [[BWCArticleViewController alloc] init];
     
@@ -85,6 +88,13 @@
     
     [bavc didMoveToParentViewController:self];
     */
+    
+    UILabel *onDemandLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, bodvc.view.frame.origin.y-50.0, self.view.frame.size.width, 50.0)];
+    [onDemandLabel setFont:[UIFont fontWithName:@"Futura" size:25.0]];
+    [onDemandLabel setTextColor:[UIColor whiteColor]];
+    [onDemandLabel setText:@"  On Demand Content"];
+    onDemandLabel.backgroundColor = [UIColor colorWithRed:154.0/255.0 green:70.0/255.0 blue:24.0/255.0 alpha:1.0];
+    [self.view addSubview:onDemandLabel];
 }
 
 @end
