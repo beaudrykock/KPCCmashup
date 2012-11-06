@@ -36,6 +36,29 @@
 		9F5D20D7164432FE0070A450 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D3164432FE0070A450 /* playbutton@2x.png */; };
 		9F5D20E01644366D0070A450 /* BWCOnDemandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */; };
 		9F5D20E11644366D0070A450 /* BWCOnDemandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */; };
+		E4D3007A1649AC7C00648B03 /* AFKPageFlipper.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300501649AC7C00648B03 /* AFKPageFlipper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D3007B1649AC7C00648B03 /* close-popup.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D300511649AC7C00648B03 /* close-popup.png */; };
+		E4D3007C1649AC7C00648B03 /* flip-illusion-oriented.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E4D300531649AC7C00648B03 /* flip-illusion-oriented.jpg */; };
+		E4D3007D1649AC7C00648B03 /* flip-illusion.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D300541649AC7C00648B03 /* flip-illusion.png */; };
+		E4D3007F1649AC7C00648B03 /* FooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300581649AC7C00648B03 /* FooterView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300801649AC7C00648B03 /* FullScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D3005A1649AC7C00648B03 /* FullScreenView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300811649AC7C00648B03 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D3005C1649AC7C00648B03 /* HeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300821649AC7C00648B03 /* Layout1.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D3005E1649AC7C00648B03 /* Layout1.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300831649AC7C00648B03 /* Layout2.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300601649AC7C00648B03 /* Layout2.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300841649AC7C00648B03 /* Layout3.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300621649AC7C00648B03 /* Layout3.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300851649AC7C00648B03 /* Layout4.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300641649AC7C00648B03 /* Layout4.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300861649AC7C00648B03 /* Layout5.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300661649AC7C00648B03 /* Layout5.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300871649AC7C00648B03 /* Layout6.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300681649AC7C00648B03 /* Layout6.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300881649AC7C00648B03 /* Layout7.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D3006A1649AC7C00648B03 /* Layout7.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300891649AC7C00648B03 /* Layout8.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D3006C1649AC7C00648B03 /* Layout8.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D3008A1649AC7C00648B03 /* LayoutViewExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D3006E1649AC7C00648B03 /* LayoutViewExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D3008B1649AC7C00648B03 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300701649AC7C00648B03 /* MessageModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D3008C1649AC7C00648B03 /* missing-people.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D300711649AC7C00648B03 /* missing-people.png */; };
+		E4D3008D1649AC7C00648B03 /* selected-page.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D300721649AC7C00648B03 /* selected-page.png */; };
+		E4D3008E1649AC7C00648B03 /* TitleAndTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300741649AC7C00648B03 /* TitleAndTextView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D3008F1649AC7C00648B03 /* UIViewExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300761649AC7C00648B03 /* UIViewExtention.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E4D300901649AC7C00648B03 /* unselected-page.png in Resources */ = {isa = PBXBuildFile; fileRef = E4D300771649AC7C00648B03 /* unselected-page.png */; };
+		E4D300911649AC7C00648B03 /* WallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4D300791649AC7C00648B03 /* WallViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		E4E35D521648C40C00ECACEC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D3D1648C40C00ECACEC /* SDImageCache.m */; };
 		E4E35D531648C40C00ECACEC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D411648C40C00ECACEC /* SDWebImageDecoder.m */; };
 		E4E35D541648C40C00ECACEC /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D431648C40C00ECACEC /* SDWebImageDownloader.m */; };
@@ -91,6 +114,47 @@
 		9F5D20DD1644366C0070A450 /* BWCOnDemandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCOnDemandViewController.h; sourceTree = "<group>"; };
 		9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCOnDemandViewController.m; sourceTree = "<group>"; };
 		9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCOnDemandViewController.xib; sourceTree = "<group>"; };
+		E4D3004F1649AC7C00648B03 /* AFKPageFlipper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFKPageFlipper.h; path = KPCCmashup/FlipView/AFKPageFlipper.h; sourceTree = "<group>"; };
+		E4D300501649AC7C00648B03 /* AFKPageFlipper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFKPageFlipper.m; path = KPCCmashup/FlipView/AFKPageFlipper.m; sourceTree = "<group>"; };
+		E4D300511649AC7C00648B03 /* close-popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "close-popup.png"; path = "KPCCmashup/FlipView/close-popup.png"; sourceTree = "<group>"; };
+		E4D300521649AC7C00648B03 /* ColorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ColorHelper.h; path = KPCCmashup/FlipView/ColorHelper.h; sourceTree = "<group>"; };
+		E4D300531649AC7C00648B03 /* flip-illusion-oriented.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "flip-illusion-oriented.jpg"; path = "KPCCmashup/FlipView/flip-illusion-oriented.jpg"; sourceTree = "<group>"; };
+		E4D300541649AC7C00648B03 /* flip-illusion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "flip-illusion.png"; path = "KPCCmashup/FlipView/flip-illusion.png"; sourceTree = "<group>"; };
+		E4D300571649AC7C00648B03 /* FooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FooterView.h; path = KPCCmashup/FlipView/FooterView.h; sourceTree = "<group>"; };
+		E4D300581649AC7C00648B03 /* FooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FooterView.m; path = KPCCmashup/FlipView/FooterView.m; sourceTree = "<group>"; };
+		E4D300591649AC7C00648B03 /* FullScreenView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FullScreenView.h; path = KPCCmashup/FlipView/FullScreenView.h; sourceTree = "<group>"; };
+		E4D3005A1649AC7C00648B03 /* FullScreenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FullScreenView.m; path = KPCCmashup/FlipView/FullScreenView.m; sourceTree = "<group>"; };
+		E4D3005B1649AC7C00648B03 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HeaderView.h; path = KPCCmashup/FlipView/HeaderView.h; sourceTree = "<group>"; };
+		E4D3005C1649AC7C00648B03 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HeaderView.m; path = KPCCmashup/FlipView/HeaderView.m; sourceTree = "<group>"; };
+		E4D3005D1649AC7C00648B03 /* Layout1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout1.h; path = KPCCmashup/FlipView/Layout1.h; sourceTree = "<group>"; };
+		E4D3005E1649AC7C00648B03 /* Layout1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout1.m; path = KPCCmashup/FlipView/Layout1.m; sourceTree = "<group>"; };
+		E4D3005F1649AC7C00648B03 /* Layout2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout2.h; path = KPCCmashup/FlipView/Layout2.h; sourceTree = "<group>"; };
+		E4D300601649AC7C00648B03 /* Layout2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout2.m; path = KPCCmashup/FlipView/Layout2.m; sourceTree = "<group>"; };
+		E4D300611649AC7C00648B03 /* Layout3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout3.h; path = KPCCmashup/FlipView/Layout3.h; sourceTree = "<group>"; };
+		E4D300621649AC7C00648B03 /* Layout3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout3.m; path = KPCCmashup/FlipView/Layout3.m; sourceTree = "<group>"; };
+		E4D300631649AC7C00648B03 /* Layout4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout4.h; path = KPCCmashup/FlipView/Layout4.h; sourceTree = "<group>"; };
+		E4D300641649AC7C00648B03 /* Layout4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout4.m; path = KPCCmashup/FlipView/Layout4.m; sourceTree = "<group>"; };
+		E4D300651649AC7C00648B03 /* Layout5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout5.h; path = KPCCmashup/FlipView/Layout5.h; sourceTree = "<group>"; };
+		E4D300661649AC7C00648B03 /* Layout5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout5.m; path = KPCCmashup/FlipView/Layout5.m; sourceTree = "<group>"; };
+		E4D300671649AC7C00648B03 /* Layout6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout6.h; path = KPCCmashup/FlipView/Layout6.h; sourceTree = "<group>"; };
+		E4D300681649AC7C00648B03 /* Layout6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout6.m; path = KPCCmashup/FlipView/Layout6.m; sourceTree = "<group>"; };
+		E4D300691649AC7C00648B03 /* Layout7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout7.h; path = KPCCmashup/FlipView/Layout7.h; sourceTree = "<group>"; };
+		E4D3006A1649AC7C00648B03 /* Layout7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout7.m; path = KPCCmashup/FlipView/Layout7.m; sourceTree = "<group>"; };
+		E4D3006B1649AC7C00648B03 /* Layout8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Layout8.h; path = KPCCmashup/FlipView/Layout8.h; sourceTree = "<group>"; };
+		E4D3006C1649AC7C00648B03 /* Layout8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Layout8.m; path = KPCCmashup/FlipView/Layout8.m; sourceTree = "<group>"; };
+		E4D3006D1649AC7C00648B03 /* LayoutViewExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutViewExtention.h; path = KPCCmashup/FlipView/LayoutViewExtention.h; sourceTree = "<group>"; };
+		E4D3006E1649AC7C00648B03 /* LayoutViewExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayoutViewExtention.m; path = KPCCmashup/FlipView/LayoutViewExtention.m; sourceTree = "<group>"; };
+		E4D3006F1649AC7C00648B03 /* MessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MessageModel.h; path = KPCCmashup/FlipView/MessageModel.h; sourceTree = "<group>"; };
+		E4D300701649AC7C00648B03 /* MessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MessageModel.m; path = KPCCmashup/FlipView/MessageModel.m; sourceTree = "<group>"; };
+		E4D300711649AC7C00648B03 /* missing-people.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "missing-people.png"; path = "KPCCmashup/FlipView/missing-people.png"; sourceTree = "<group>"; };
+		E4D300721649AC7C00648B03 /* selected-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selected-page.png"; path = "KPCCmashup/FlipView/selected-page.png"; sourceTree = "<group>"; };
+		E4D300731649AC7C00648B03 /* TitleAndTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TitleAndTextView.h; path = KPCCmashup/FlipView/TitleAndTextView.h; sourceTree = "<group>"; };
+		E4D300741649AC7C00648B03 /* TitleAndTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TitleAndTextView.m; path = KPCCmashup/FlipView/TitleAndTextView.m; sourceTree = "<group>"; };
+		E4D300751649AC7C00648B03 /* UIViewExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIViewExtention.h; path = KPCCmashup/FlipView/UIViewExtention.h; sourceTree = "<group>"; };
+		E4D300761649AC7C00648B03 /* UIViewExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIViewExtention.m; path = KPCCmashup/FlipView/UIViewExtention.m; sourceTree = "<group>"; };
+		E4D300771649AC7C00648B03 /* unselected-page.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "unselected-page.png"; path = "KPCCmashup/FlipView/unselected-page.png"; sourceTree = "<group>"; };
+		E4D300781649AC7C00648B03 /* WallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WallViewController.h; path = KPCCmashup/FlipView/WallViewController.h; sourceTree = "<group>"; };
+		E4D300791649AC7C00648B03 /* WallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WallViewController.m; path = KPCCmashup/FlipView/WallViewController.m; sourceTree = "<group>"; };
 		E4E35D3C1648C40C00ECACEC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = External/SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		E4E35D3D1648C40C00ECACEC /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = External/SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		E4E35D3E1648C40C00ECACEC /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCacheDelegate.h; path = External/SDWebImage/SDImageCacheDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +217,7 @@
 		9F4412D6163D9E5C00F3C645 = {
 			isa = PBXGroup;
 			children = (
+				E4D3004D1649A61600648B03 /* FlipView */,
 				9F4412EB163D9E5C00F3C645 /* KPCCmashup */,
 				9F4412E4163D9E5C00F3C645 /* Frameworks */,
 				9F4412E2163D9E5C00F3C645 /* Products */,
@@ -275,6 +340,110 @@
 				9F5D20D8164433060070A450 /* Buttons */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E4D3004D1649A61600648B03 /* FlipView */ = {
+			isa = PBXGroup;
+			children = (
+				E4D300981649ACFE00648B03 /* Controllers */,
+				E4D300971649ACE400648B03 /* Layouts */,
+				E4D300961649ACDC00648B03 /* AKPageFlipper */,
+				E4D300951649ACD200648B03 /* Views */,
+				E4D300941649ACC400648B03 /* Helpers */,
+				E4D300931649ACB300648B03 /* Models */,
+				E4D300921649AC9700648B03 /* images */,
+			);
+			name = FlipView;
+			sourceTree = "<group>";
+		};
+		E4D300921649AC9700648B03 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				E4D300511649AC7C00648B03 /* close-popup.png */,
+				E4D300531649AC7C00648B03 /* flip-illusion-oriented.jpg */,
+				E4D300541649AC7C00648B03 /* flip-illusion.png */,
+				E4D300711649AC7C00648B03 /* missing-people.png */,
+				E4D300721649AC7C00648B03 /* selected-page.png */,
+				E4D300771649AC7C00648B03 /* unselected-page.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		E4D300931649ACB300648B03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E4D3006F1649AC7C00648B03 /* MessageModel.h */,
+				E4D300701649AC7C00648B03 /* MessageModel.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		E4D300941649ACC400648B03 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E4D300521649AC7C00648B03 /* ColorHelper.h */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		E4D300951649ACD200648B03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4D300731649AC7C00648B03 /* TitleAndTextView.h */,
+				E4D300741649AC7C00648B03 /* TitleAndTextView.m */,
+				E4D300751649AC7C00648B03 /* UIViewExtention.h */,
+				E4D300761649AC7C00648B03 /* UIViewExtention.m */,
+				E4D300571649AC7C00648B03 /* FooterView.h */,
+				E4D300581649AC7C00648B03 /* FooterView.m */,
+				E4D300591649AC7C00648B03 /* FullScreenView.h */,
+				E4D3005A1649AC7C00648B03 /* FullScreenView.m */,
+				E4D3005B1649AC7C00648B03 /* HeaderView.h */,
+				E4D3005C1649AC7C00648B03 /* HeaderView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		E4D300961649ACDC00648B03 /* AKPageFlipper */ = {
+			isa = PBXGroup;
+			children = (
+				E4D3004F1649AC7C00648B03 /* AFKPageFlipper.h */,
+				E4D300501649AC7C00648B03 /* AFKPageFlipper.m */,
+			);
+			name = AKPageFlipper;
+			sourceTree = "<group>";
+		};
+		E4D300971649ACE400648B03 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				E4D3005D1649AC7C00648B03 /* Layout1.h */,
+				E4D3005E1649AC7C00648B03 /* Layout1.m */,
+				E4D3005F1649AC7C00648B03 /* Layout2.h */,
+				E4D300601649AC7C00648B03 /* Layout2.m */,
+				E4D300611649AC7C00648B03 /* Layout3.h */,
+				E4D300621649AC7C00648B03 /* Layout3.m */,
+				E4D300631649AC7C00648B03 /* Layout4.h */,
+				E4D300641649AC7C00648B03 /* Layout4.m */,
+				E4D300651649AC7C00648B03 /* Layout5.h */,
+				E4D300661649AC7C00648B03 /* Layout5.m */,
+				E4D300671649AC7C00648B03 /* Layout6.h */,
+				E4D300681649AC7C00648B03 /* Layout6.m */,
+				E4D300691649AC7C00648B03 /* Layout7.h */,
+				E4D3006A1649AC7C00648B03 /* Layout7.m */,
+				E4D3006B1649AC7C00648B03 /* Layout8.h */,
+				E4D3006C1649AC7C00648B03 /* Layout8.m */,
+				E4D3006D1649AC7C00648B03 /* LayoutViewExtention.h */,
+				E4D3006E1649AC7C00648B03 /* LayoutViewExtention.m */,
+			);
+			name = Layouts;
+			sourceTree = "<group>";
+		};
+		E4D300981649ACFE00648B03 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4D300781649AC7C00648B03 /* WallViewController.h */,
+				E4D300791649AC7C00648B03 /* WallViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		E4E35D251648C36900ECACEC /* External */ = {
@@ -416,6 +585,12 @@
 				9F5D20D6164432FE0070A450 /* playbutton.png in Resources */,
 				9F5D20D7164432FE0070A450 /* playbutton@2x.png in Resources */,
 				9F5D20E11644366D0070A450 /* BWCOnDemandViewController.xib in Resources */,
+				E4D3007B1649AC7C00648B03 /* close-popup.png in Resources */,
+				E4D3007C1649AC7C00648B03 /* flip-illusion-oriented.jpg in Resources */,
+				E4D3007D1649AC7C00648B03 /* flip-illusion.png in Resources */,
+				E4D3008C1649AC7C00648B03 /* missing-people.png in Resources */,
+				E4D3008D1649AC7C00648B03 /* selected-page.png in Resources */,
+				E4D300901649AC7C00648B03 /* unselected-page.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +621,23 @@
 				E4E35D7D1648C8F200ECACEC /* MWFeedInfo.m in Sources */,
 				E4E35D7E1648C8F200ECACEC /* MWFeedItem.m in Sources */,
 				E4E35D7F1648C8F200ECACEC /* MWFeedParser.m in Sources */,
+				E4D3007A1649AC7C00648B03 /* AFKPageFlipper.m in Sources */,
+				E4D3007F1649AC7C00648B03 /* FooterView.m in Sources */,
+				E4D300801649AC7C00648B03 /* FullScreenView.m in Sources */,
+				E4D300811649AC7C00648B03 /* HeaderView.m in Sources */,
+				E4D300821649AC7C00648B03 /* Layout1.m in Sources */,
+				E4D300831649AC7C00648B03 /* Layout2.m in Sources */,
+				E4D300841649AC7C00648B03 /* Layout3.m in Sources */,
+				E4D300851649AC7C00648B03 /* Layout4.m in Sources */,
+				E4D300861649AC7C00648B03 /* Layout5.m in Sources */,
+				E4D300871649AC7C00648B03 /* Layout6.m in Sources */,
+				E4D300881649AC7C00648B03 /* Layout7.m in Sources */,
+				E4D300891649AC7C00648B03 /* Layout8.m in Sources */,
+				E4D3008A1649AC7C00648B03 /* LayoutViewExtention.m in Sources */,
+				E4D3008B1649AC7C00648B03 /* MessageModel.m in Sources */,
+				E4D3008E1649AC7C00648B03 /* TitleAndTextView.m in Sources */,
+				E4D3008F1649AC7C00648B03 /* UIViewExtention.m in Sources */,
+				E4D300911649AC7C00648B03 /* WallViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

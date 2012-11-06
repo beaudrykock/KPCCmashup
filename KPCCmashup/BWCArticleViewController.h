@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "MWFeedParser.h"
 
+@class WallViewController;
+@class UIViewExtention;
+@class MessageModel;
+
 @interface BWCArticleViewController : UIViewController<MWFeedParserDelegate>{
     // Parsing
 	MWFeedParser *feedParser;
@@ -17,9 +21,16 @@
 	// Displaying
 	NSArray *itemsToDisplay;
 	NSDateFormatter *formatter;
+    
+    WallViewController *viewController;
 }
 
+-(void)showViewInFullScreen:(UIViewExtention*)viewToShow withModel:(MessageModel*)model;
+-(void)closeFullScreen;
+
+
 // Properties
-@property (nonatomic, retain) NSArray *itemsToDisplay;
+@property (nonatomic, strong) NSArray *itemsToDisplay;
+@property (nonatomic, strong) WallViewController *viewController;
 
 @end

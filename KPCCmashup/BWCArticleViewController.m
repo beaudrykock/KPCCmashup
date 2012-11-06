@@ -9,6 +9,9 @@
 #import "BWCArticleViewController.h"
 #import "NSString+HTML.h"
 #import "MWFeedParser.h"
+#import "UIViewExtention.h"
+#import "MessageModel.h"
+#import "WallViewController.h"
 
 @interface BWCArticleViewController ()
 
@@ -16,6 +19,7 @@
 
 @implementation BWCArticleViewController
 
+@synthesize viewController;
 @synthesize itemsToDisplay;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -130,6 +134,13 @@ if (item) {
     // Dispose of any resources that can be recreated.
 }
 
+
+-(void)showViewInFullScreen:(UIViewExtention*)viewToShow withModel:(MessageModel*)model{
+	[viewController showViewInFullScreen:viewToShow withModel:model];
+}
+-(void)closeFullScreen {
+	[viewController closeFullScreen];
+}
 
 
 @end
