@@ -64,6 +64,26 @@
     
 }
 
+/*
+// Configure the FlipViews.
+MWFeedItem *item = [itemsToDisplay objectAtIndex:indexPath.row];
+if (item) {
+    
+    // Process
+    NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+    NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+    
+    // Set
+    cell.textLabel.font = [UIFont boldSystemFontOfSize:15];
+    cell.textLabel.text = itemTitle;
+    NSMutableString *subtitle = [NSMutableString string];
+    if (item.date) [subtitle appendFormat:@"%@: ", [formatter stringFromDate:item.date]];
+    [subtitle appendString:itemSummary];
+    cell.detailTextLabel.text = subtitle;
+    
+}
+*/
+
 #pragma mark -
 #pragma mark MWFeedParserDelegate
 
