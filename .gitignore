@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
 *.xcuserstate
 
 KPCCmashup.xcodeproj/project.xcworkspace/xcuserdata/mallu.xcuserdatad/UserInterfaceState.xcuserstate
+=======
+.DS_Store
+
+*.xcuserstate
+
+>>>>>>> 2c9283510396cad9d7770cf2bc1cce4bfcb9451b
