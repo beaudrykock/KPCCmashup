@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MWFeedParser.h"
 
-@interface BWCArticleViewController : UIViewController
+@interface BWCArticleViewController : UIViewController<MWFeedParserDelegate>{
+    // Parsing
+	MWFeedParser *feedParser;
+	NSMutableArray *parsedItems;
+	
+	// Displaying
+	NSArray *itemsToDisplay;
+	NSDateFormatter *formatter;
+}
+
+// Properties
+@property (nonatomic, retain) NSArray *itemsToDisplay;
 
 @end
