@@ -19,6 +19,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    self.view.backgroundColor = [UIColor colorWithRed:255.0 green:255.0 blue:255.0 alpha:1.0];
+    
+    UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"KPCC_logo.png"]];
+    image.frame = CGRectMake(20.0, 20.0, 193, 51);
+    [self.view addSubview:image];
+    
     [self addViewControllers];
 }
 
@@ -42,6 +48,7 @@
     
     CGRect frame = apvc.view.frame;
     frame.origin.y = 20.0;
+    frame.origin.x = 20+193.0+10.0;
     apvc.view.frame = frame;
     
     [self.view addSubview:apvc.view];
@@ -49,6 +56,7 @@
     [apvc didMoveToParentViewController:self];
     
     // ON-DEMAND COLLECTION VIEW
+    /*
     BWCOnDemandViewController *bodvc = [[BWCOnDemandViewController alloc] init];
     
     [self addChildViewController:bodvc];
@@ -76,7 +84,7 @@
     [self.view addSubview:bavc.view];
     
     [bavc didMoveToParentViewController:self];
-    
+    */
 }
 
 @end

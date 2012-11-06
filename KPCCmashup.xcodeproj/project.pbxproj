@@ -32,10 +32,15 @@
 		9F5D20CF164432E80070A450 /* AudioPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20CE164432E80070A450 /* AudioPlayerView.xib */; };
 		9F5D20D4164432FE0070A450 /* pausebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D0164432FE0070A450 /* pausebutton.png */; };
 		9F5D20D5164432FE0070A450 /* pausebutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D1164432FE0070A450 /* pausebutton@2x.png */; };
-		9F5D20D6164432FE0070A450 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D2164432FE0070A450 /* playbutton.png */; };
-		9F5D20D7164432FE0070A450 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20D3164432FE0070A450 /* playbutton@2x.png */; };
 		9F5D20E01644366D0070A450 /* BWCOnDemandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */; };
 		9F5D20E11644366D0070A450 /* BWCOnDemandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */; };
+		9F6EAC7616497F7900F0A878 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC7416497F7900F0A878 /* playbutton.png */; };
+		9F6EAC7716497F7900F0A878 /* playbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC7516497F7900F0A878 /* playbutton@2x.png */; };
+		9F6EAC791649817000F0A878 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC781649817000F0A878 /* Default-Portrait~ipad.png */; };
+		9F6EAC7B1649817800F0A878 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC7A1649817800F0A878 /* Default-Portrait@2x~ipad.png */; };
+		9F6EAC821649A10100F0A878 /* KPCC_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC811649A10100F0A878 /* KPCC_logo.png */; };
+		9F6EAC851649A3B300F0A878 /* loadingbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC831649A3B300F0A878 /* loadingbutton.png */; };
+		9F6EAC861649A3B300F0A878 /* loadingbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6EAC841649A3B300F0A878 /* loadingbutton@2x.png */; };
 		E4E35D521648C40C00ECACEC /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D3D1648C40C00ECACEC /* SDImageCache.m */; };
 		E4E35D531648C40C00ECACEC /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D411648C40C00ECACEC /* SDWebImageDecoder.m */; };
 		E4E35D541648C40C00ECACEC /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E35D431648C40C00ECACEC /* SDWebImageDownloader.m */; };
@@ -86,11 +91,16 @@
 		9F5D20CE164432E80070A450 /* AudioPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AudioPlayerView.xib; sourceTree = "<group>"; };
 		9F5D20D0164432FE0070A450 /* pausebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pausebutton.png; sourceTree = "<group>"; };
 		9F5D20D1164432FE0070A450 /* pausebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pausebutton@2x.png"; sourceTree = "<group>"; };
-		9F5D20D2164432FE0070A450 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
-		9F5D20D3164432FE0070A450 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
 		9F5D20DD1644366C0070A450 /* BWCOnDemandViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCOnDemandViewController.h; sourceTree = "<group>"; };
 		9F5D20DE1644366C0070A450 /* BWCOnDemandViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCOnDemandViewController.m; sourceTree = "<group>"; };
 		9F5D20DF1644366C0070A450 /* BWCOnDemandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCOnDemandViewController.xib; sourceTree = "<group>"; };
+		9F6EAC7416497F7900F0A878 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		9F6EAC7516497F7900F0A878 /* playbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playbutton@2x.png"; sourceTree = "<group>"; };
+		9F6EAC781649817000F0A878 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		9F6EAC7A1649817800F0A878 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		9F6EAC811649A10100F0A878 /* KPCC_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KPCC_logo.png; sourceTree = "<group>"; };
+		9F6EAC831649A3B300F0A878 /* loadingbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loadingbutton.png; sourceTree = "<group>"; };
+		9F6EAC841649A3B300F0A878 /* loadingbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingbutton@2x.png"; sourceTree = "<group>"; };
 		E4E35D3C1648C40C00ECACEC /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = External/SDWebImage/SDImageCache.h; sourceTree = "<group>"; };
 		E4E35D3D1648C40C00ECACEC /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SDImageCache.m; path = External/SDWebImage/SDImageCache.m; sourceTree = "<group>"; };
 		E4E35D3E1648C40C00ECACEC /* SDImageCacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SDImageCacheDelegate.h; path = External/SDWebImage/SDImageCacheDelegate.h; sourceTree = "<group>"; };
@@ -228,10 +238,12 @@
 		9F5D20D8164433060070A450 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				9F6EAC7416497F7900F0A878 /* playbutton.png */,
+				9F6EAC7516497F7900F0A878 /* playbutton@2x.png */,
 				9F5D20D0164432FE0070A450 /* pausebutton.png */,
 				9F5D20D1164432FE0070A450 /* pausebutton@2x.png */,
-				9F5D20D2164432FE0070A450 /* playbutton.png */,
-				9F5D20D3164432FE0070A450 /* playbutton@2x.png */,
+				9F6EAC831649A3B300F0A878 /* loadingbutton.png */,
+				9F6EAC841649A3B300F0A878 /* loadingbutton@2x.png */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -272,9 +284,20 @@
 		9F5D20E516443A470070A450 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9F6EAC811649A10100F0A878 /* KPCC_logo.png */,
+				9F6EAC7C1649818700F0A878 /* Launch images */,
 				9F5D20D8164433060070A450 /* Buttons */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		9F6EAC7C1649818700F0A878 /* Launch images */ = {
+			isa = PBXGroup;
+			children = (
+				9F6EAC7A1649817800F0A878 /* Default-Portrait@2x~ipad.png */,
+				9F6EAC781649817000F0A878 /* Default-Portrait~ipad.png */,
+			);
+			name = "Launch images";
 			sourceTree = "<group>";
 		};
 		E4E35D251648C36900ECACEC /* External */ = {
@@ -413,9 +436,14 @@
 				9F5D20CF164432E80070A450 /* AudioPlayerView.xib in Resources */,
 				9F5D20D4164432FE0070A450 /* pausebutton.png in Resources */,
 				9F5D20D5164432FE0070A450 /* pausebutton@2x.png in Resources */,
-				9F5D20D6164432FE0070A450 /* playbutton.png in Resources */,
-				9F5D20D7164432FE0070A450 /* playbutton@2x.png in Resources */,
 				9F5D20E11644366D0070A450 /* BWCOnDemandViewController.xib in Resources */,
+				9F6EAC7616497F7900F0A878 /* playbutton.png in Resources */,
+				9F6EAC7716497F7900F0A878 /* playbutton@2x.png in Resources */,
+				9F6EAC791649817000F0A878 /* Default-Portrait~ipad.png in Resources */,
+				9F6EAC7B1649817800F0A878 /* Default-Portrait@2x~ipad.png in Resources */,
+				9F6EAC821649A10100F0A878 /* KPCC_logo.png in Resources */,
+				9F6EAC851649A3B300F0A878 /* loadingbutton.png in Resources */,
+				9F6EAC861649A3B300F0A878 /* loadingbutton@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

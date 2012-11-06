@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "KPCCmashup/BWCViewController.m"
-         timestampString = "373569803.154238"
+         timestampString = "373924198.380305"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
+         startingLineNumber = "43"
+         endingLineNumber = "43"
          landmarkName = "-addViewControllers"
          landmarkType = "5">
       </FileBreakpoint>
@@ -40,6 +40,19 @@
          startingLineNumber = "28"
          endingLineNumber = "28"
          landmarkName = "-viewDidLoad"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "KPCCmashup/AudioPlayerViewController.m"
+         timestampString = "373925527.682335"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "355"
+         endingLineNumber = "355"
+         landmarkName = "-updateProgress:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
