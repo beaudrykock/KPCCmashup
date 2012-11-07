@@ -184,23 +184,23 @@
 		TitleAndTextView* view5forLayout;
 		for (int i = 0; i < [messageArray count]; i++) {
 			if (i == 0) {
-				view1forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i]] autorelease];
+				view1forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i] andDelegate:self] autorelease];
 				[viewDictonary setObject:view1forLayout forKey:@"view1"];
 			}
 			if (i == 1) {
-				view2forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i]] autorelease];
+				view2forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i] andDelegate:self] autorelease];
 				[viewDictonary setObject:view2forLayout forKey:@"view2"];
 			}
 			if (i == 2) {
-				view3forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i]] autorelease];
+				view3forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i] andDelegate:self] autorelease];
 				[viewDictonary setObject:view3forLayout forKey:@"view3"];
 			}
 			if (i == 3) {
-				view4forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i]] autorelease];
+				view4forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i] andDelegate:self] autorelease];
 				[viewDictonary setObject:view4forLayout forKey:@"view4"];
 			}
 			if (i == 4) {
-				view5forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i]] autorelease];
+				view5forLayout = [[[TitleAndTextView alloc] initWithMessageModel:(MessageModel*)[messageArray objectAtIndex:i] andDelegate:self] autorelease];
 				[viewDictonary setObject:view5forLayout forKey:@"view5"];
 			}
 		}
@@ -217,7 +217,7 @@
 			[layoutToReturn setFrame:self.view.bounds];
 			layoutToReturn.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 			
-			HeaderView* headerView = [[HeaderView alloc] initWithFrame:CGRectMake(0, 0, layoutToReturn.frame.size.width, 50)];
+			HeaderView* headerView = [[HeaderView alloc] initWithFrame:CGRectMake(0, 0, layoutToReturn.frame.size.width, 40)];
 			headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 			[headerView setWallTitleText:@"Latest News"];
 			[headerView setBackgroundColor:[UIColor whiteColor]];
@@ -267,7 +267,7 @@
 		viewToShowInFullScreen =  viewToShow;
 		viewToShowInFullScreen.originalRect = viewToShowInFullScreen.frame;
 		viewToShowInFullScreen.isFullScreen = TRUE;
-		FullScreenView* fullView = [[FullScreenView alloc] initWithModel:model];
+		FullScreenView* fullView = [[FullScreenView alloc] initWithModel:model andDelegate:self];
 		fullView.frame = viewToShowInFullScreen.frame;
 		fullView.viewToOverLap = viewToShowInFullScreen;
 		fullView.fullScreenBG = fullScreenBGView;

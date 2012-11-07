@@ -7,19 +7,6 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "KPCCmashup/FlipView/TitleAndTextView.m"
-         timestampString = "373939610.22296"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "84"
-         endingLineNumber = "84"
-         landmarkName = "-initializeFields"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "KPCCmashup/External/MWFeedParser/MWFeedParser.m"
          timestampString = "373939829.518939"
          startingColumnNumber = "9223372036854775807"
@@ -56,7 +43,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "KPCCmashup/BWCArticleViewController.m"
@@ -66,6 +53,32 @@
          startingLineNumber = "64"
          endingLineNumber = "64"
          landmarkName = "-updateTableWithParsedItems"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "KPCCmashup/FlipView/TitleAndTextView.m"
+         timestampString = "374012544.707636"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "60"
+         endingLineNumber = "60"
+         landmarkName = "-reAdjustLayout"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "KPCCmashup/FlipView/TitleAndTextView.m"
+         timestampString = "374012544.707636"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "126"
+         endingLineNumber = "126"
+         landmarkName = "-initializeFields"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

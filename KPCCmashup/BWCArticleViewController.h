@@ -25,10 +25,6 @@
     WallViewController *viewController;
 }
 
--(void)showViewInFullScreen:(UIViewExtention*)viewToShow withModel:(MessageModel*)model;
--(void)closeFullScreen;
-
-
 // Properties
 @property (nonatomic, strong) NSArray *itemsToDisplay;
 @property (nonatomic, strong) WallViewController *viewController;

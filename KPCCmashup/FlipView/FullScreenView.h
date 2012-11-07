@@ -49,10 +49,12 @@
 	UIScrollView* scrollView;
 }
 
--(id)initWithModel:(MessageModel*)model;
+-(id)initWithModel:(MessageModel*)model andDelegate:(id)delegate;
 -(void)showFields;
 
 @property (nonatomic,assign) MessageModel* messageModel;
 @property (nonatomic,assign) UIViewExtention* viewToOverLap;
 @property (nonatomic,assign) UIView* fullScreenBG;
+@property (nonatomic, assign) id delegate;
+
 @end

@@ -43,4 +43,5 @@ alpha:(a)]
 
 #define RGBA(r,g,b,a) (r)/255.0, (g)/255.0, (b)/255.0, (a)
 
+#define kFontFamily @"Futura"
 

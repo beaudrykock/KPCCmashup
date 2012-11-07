@@ -30,13 +30,16 @@
 //
 #import "FullScreenView.h"
 #import "MessageModel.h"
+#import "UIImageView+WebCache.h"
 
 @implementation FullScreenView
 
-@synthesize messageModel,viewToOverLap,fullScreenBG;
+@synthesize messageModel,viewToOverLap,fullScreenBG,delegate;
 
--(id)initWithModel:(MessageModel*)model {
+-(id)initWithModel:(MessageModel*)model andDelegate:(id)delegate_{
 	if (self = [super init]) {
+        delegate=delegate_;
+        
 		messageModel = model;
 		
 		[self setBackgroundColor:RGBCOLOR(243,243,243)];
@@ -44,23 +47,35 @@
 		contentView = [[UIView alloc] init];
 		[contentView setBackgroundColor:RGBCOLOR(243,243,243)];
 		
-		userImageView = [[UIImageView alloc] init];
+        userImageView = [[UIImageView alloc] init];
 		[userImageView setBackgroundColor:[UIColor clearColor]];
-		[userImageView setFrame:CGRectMake(10, 10, 130, 130)];
-		[userImageView setImage:[UIImage imageNamed:@"missing-people.png"]];
+        
+        [userImageView setFrame:CGRectMake(10, 10, 130, 130)];
 		[contentView addSubview:userImageView];
-		
+
+        [userImageView setImageWithURL:[NSURL URLWithString:model.image]
+                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]
+                               success:^(UIImage *image, BOOL cached) {
+                                   
+                                   [self reAdjustLayout];
+                               }
+                               failure:^(NSError *error) {
+                                   
+                               }];
+        
+
 		userNameLabel = [[UILabel alloc] init];
-		userNameLabel.font =[UIFont fontWithName:@"Helvetica" size:25];
+		userNameLabel.font =[UIFont fontWithName:kFontFamily size:25];
 		[userNameLabel setTextColor:RGBCOLOR(2,90,177)];
 		[userNameLabel setBackgroundColor:[UIColor clearColor]];
 		[userNameLabel setText:[NSString stringWithFormat:@"%@",messageModel.title]];
+        userNameLabel.numberOfLines=2;
 		[userNameLabel setFrame:CGRectMake(userImageView.frame.origin.x + userImageView.frame.size.width + 10, 5, 0, 0)];
 		[contentView addSubview:userNameLabel];
 		
 		timeStampLabel = [[UILabel alloc] init];
 		[timeStampLabel setText:messageModel.createdAt];
-		timeStampLabel.font =[UIFont fontWithName:@"Helvetica" size:12];
+		timeStampLabel.font =[UIFont fontWithName:kFontFamily size:12];
 		[timeStampLabel setTextColor:RGBCOLOR(111,111,111)];
 		[timeStampLabel setBackgroundColor:[UIColor clearColor]];
 		[timeStampLabel setFrame:CGRectMake(userNameLabel.frame.origin.x, userNameLabel.frame.origin.y, 0, 0)];
@@ -74,7 +89,7 @@
 		
 		messageLabel = [[UILabel alloc] init];
 		messageLabel.numberOfLines = 0;	
-		messageLabel.font = [UIFont fontWithName:@"Helvetica" size:22];		
+		messageLabel.font = [UIFont fontWithName:kFontFamily size:22];		
 		messageLabel.textColor =  RGBCOLOR(33,33,33);
 		messageLabel.highlightedTextColor = RGBCOLOR(33,33,33);
 		[messageLabel setBackgroundColor:[UIColor clearColor]];
@@ -103,8 +118,14 @@
 	
 		[contentView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
 		CGSize contentViewArea = CGSizeMake(contentView.frame.size.width, contentView.frame.size.height);
-		
-		//[userImageView setFrame:CGRectMake(10, 10, 130, 130)];
+   
+        if(userImageView.image.size.height>0){
+            float proportion = (userImageView.image.size.height/userImageView.image.size.width);
+            [userImageView setFrame:CGRectMake(5, 5, contentViewArea.width/3, (contentViewArea.width/3)*proportion)];
+        }
+        else{
+            [userImageView setFrame:CGRectMake(0, 0, contentViewArea.width, 100)];
+        }
 	
 		[userNameLabel sizeToFit];
 		[userNameLabel setFrame:CGRectMake(userImageView.frame.origin.x + userImageView.frame.size.width + 10, 5, (contentViewArea.width - (userImageView.frame.size.width + 10)) - 30, userNameLabel.frame.size.height)];
@@ -148,7 +169,7 @@
    if ([animationID isEqualToString:@"CLOSEFULLSCREEN"]) {
 	   self.alpha = 0;
 	   [self removeFromSuperview];
-	   //[parent closeFullScreen];
+	   [delegate closeFullScreen];
    }
 }
 

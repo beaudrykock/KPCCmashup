@@ -68,10 +68,8 @@
     // Override point for customization after app launch.
 	viewController = [[WallViewController alloc] initWithNibName:nil bundle:nil withItems:self.itemsToDisplay];
     
+    [viewController.view setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self addChildViewController:viewController];
-    
-    viewController.view.center = self.view.center;
-    viewController.view.frame = self.view.frame;
     
     [self.view addSubview:viewController.view];
     [viewController didMoveToParentViewController:self];
@@ -125,13 +123,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
--(void)showViewInFullScreen:(UIViewExtention*)viewToShow withModel:(MessageModel*)model{
-	[viewController showViewInFullScreen:viewToShow withModel:model];
-}
--(void)closeFullScreen {
-	[viewController closeFullScreen];
-}
 
 
 @end

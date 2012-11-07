@@ -35,10 +35,11 @@
 
 @implementation TitleAndTextView
 
-@synthesize messageModel;
+@synthesize messageModel, delegate;
 
-- (id) initWithMessageModel:(MessageModel*)messagemodel{
+- (id) initWithMessageModel:(MessageModel*)messagemodel andDelegate:(id)delegate_{
 	if (self = [super init]) {
+        self.delegate=delegate_;
 		self.messageModel = messagemodel;
 		[self initializeFields];
 		
@@ -54,15 +55,22 @@
 
 	[contentView setFrame:CGRectMake(1, 1, self.frame.size.width-2, self.frame.size.height - 2)];
 	
-	CGSize contentViewArea = CGSizeMake((contentView.frame.size.width - 20), (contentView.frame.size.height-30));
-	
+	CGSize contentViewArea = CGSizeMake((contentView.frame.size.width - 10), (contentView.frame.size.height-15));
+	NSLog(@"image height %f width %f", userImageView.image.size.height, userImageView.image.size.width);
+    if(userImageView.image.size.height>0){
+    float proportion = (userImageView.image.size.height/userImageView.image.size.width);
+    
+        [userImageView setFrame:CGRectMake(5, 5, contentViewArea.width/2, (contentViewArea.width/2)*proportion)];
+    }
+    else{
+        [userImageView setFrame:CGRectMake(0, 0, contentViewArea.width, 100)];
+    }
 	[userNameLabel sizeToFit];
-	[userNameLabel setFrame:CGRectMake(userImageView.frame.origin.x + userImageView.frame.size.width + 10, 5, (contentViewArea.width - (userImageView.frame.size.width + 10)), userNameLabel.frame.size.height)];
+	[userNameLabel setFrame:CGRectMake(userImageView.frame.origin.x, userImageView.frame.origin.y+userImageView.frame.size.height+5, (contentViewArea.width - 10), userNameLabel.frame.size.height)];
 	[timeStampLabel sizeToFit];
 	[timeStampLabel setFrame:CGRectMake(userNameLabel.frame.origin.x, userNameLabel.frame.origin.y + userNameLabel.frame.size.height, timeStampLabel.frame.size.width, timeStampLabel.frame.size.height)];
-
 	
-	[messageLabel setFrame:CGRectMake(userImageView.frame.origin.x ,(userImageView.frame.origin.y + userImageView.frame.size.height), contentViewArea.width, contentViewArea.height - (userImageView.frame.origin.y + userImageView.frame.size.height))];	
+	[messageLabel setFrame:CGRectMake(timeStampLabel.frame.origin.x ,(timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height+10), contentViewArea.width, contentViewArea.height - (timeStampLabel.frame.origin.y + timeStampLabel.frame.size.height))];
 		
 		
 	[messageLabel setText:messageModel.content];
@@ -80,29 +88,24 @@
 	[contentView setBackgroundColor:[UIColor whiteColor]];
 	contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-	userImageView = [[UIImageView alloc] init];
-    [userImageView setImageWithURL:[NSURL URLWithString:messageModel.image]
-                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
-	[userImageView setFrame:CGRectMake(10, 10, 50, 50)];
-	[contentView addSubview:userImageView];
-
 	userNameLabel = [[UILabel alloc] init];
 	[userNameLabel setText:[NSString stringWithFormat:@"%@",messageModel.title]];
-	userNameLabel.font =[UIFont fontWithName:@"Helvetica" size:25];
+	userNameLabel.font =[UIFont fontWithName:kFontFamily size:15];
 	[userNameLabel setTextColor:RGBCOLOR(2,90,177)];
+    userNameLabel.numberOfLines=2;
 	[userNameLabel setBackgroundColor:[UIColor clearColor]];
 	[contentView addSubview:userNameLabel];
 	
 	
 	timeStampLabel = [[UILabel alloc] init];
 	[timeStampLabel setText:messageModel.createdAt];
-	timeStampLabel.font =[UIFont fontWithName:@"Helvetica" size:12];
+	timeStampLabel.font =[UIFont fontWithName:kFontFamily size:12];
 	[timeStampLabel setTextColor:RGBCOLOR(111,111,111)];
 	[timeStampLabel setBackgroundColor:[UIColor clearColor]];
 	[contentView addSubview:timeStampLabel];
 	
 	messageLabel = [[UILabel alloc] init];
-	messageLabel.font = [UIFont fontWithName:@"Helvetica" size:20];
+	messageLabel.font = [UIFont fontWithName:kFontFamily size:13];
 	messageLabel.textColor =  RGBCOLOR(33,33,33);
 	messageLabel.highlightedTextColor = RGBCOLOR(33,33,33);
 	messageLabel.contentMode = UIViewContentModeCenter;
@@ -112,13 +115,33 @@
 	[contentView addSubview:messageLabel];
 	
 	[self addSubview:contentView];
+    
+    userImageView = [[UIImageView alloc] init];
+    userImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    [userImageView setImageWithURL:[NSURL URLWithString:messageModel.image]
+                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]
+                           success:^(UIImage *image, BOOL cached) {
+                               NSLog(@"image height %f width %f", image.size.height, image.size.width);
+                               [self reAdjustLayout];
+                           }
+                           failure:^(NSError *error) {
+                               
+                           }];
+    
 	
-	[self reAdjustLayout];
+	[contentView addSubview:userImageView];
+
+	
+	//[self reAdjustLayout];
 }
 
 -(void)tapped:(UITapGestureRecognizer *)recognizer {
 	//Parent controller needs to show in full screen
     //[[FlipViewAppDelegate instance] showViewInFullScreen:self withModel:self.messageModel];
+    if([delegate respondsToSelector:@selector(showViewInFullScreen:withModel:)]){
+        [delegate performSelector:@selector(showViewInFullScreen:withModel:) withObject:self withObject:self.messageModel];
+    }
 }
 
 
@@ -134,6 +157,8 @@
 	[userNameLabel release];
 	[timeStampLabel release];
 	[messageLabel release];
+    [delegate release];
+    
 	[super dealloc];
 }
 

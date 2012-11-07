@@ -41,9 +41,10 @@
 	UILabel* messageLabel;
 }
 
-- (id) initWithMessageModel:(MessageModel*)messagemodel;
+- (id) initWithMessageModel:(MessageModel*)messagemodel andDelegate:(id)delegate;
 - (void) initializeFields;
 	
 @property (nonatomic,retain) MessageModel* messageModel;
+@property (nonatomic, retain) id delegate;
 
 @end
