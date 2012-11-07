@@ -187,6 +187,7 @@
     self.view.layer.cornerRadius = 8.0;
     [metadataArtist setText:@"KPCC.org"];
     [progressSlider setValue:100.0];
+    [progressSlider setEnabled:YES];
     
 }
 
@@ -297,11 +298,49 @@
 //
 - (IBAction)sliderMoved:(UISlider *)aSlider
 {
+    if (!self.programTooltip)
+    {
+        CMPopTipView* poptip = [[CMPopTipView alloc] initWithMessage:[self getProgramForPos:aSlider.value]];
+        poptip.backgroundColor = [UIColor colorWithRed:239/255 green:142/255 blue:73/255 alpha:1.0];
+        self.programTooltip = poptip;
+        float x = aSlider.frame.origin.x + ((aSlider.value/100.0)*aSlider.frame.size.width);
+        float y = aSlider.frame.origin.y+15.0;
+        UIView *anchor = [[UIView alloc] initWithFrame:CGRectMake(x, y, 0.1, 0.1)];
+        [anchor setBackgroundColor:[UIColor clearColor]];
+        [self.view addSubview:anchor];
+        self.tooltipAnchor = anchor;
+        [poptip presentPointingAtView:self.tooltipAnchor inView:self.view animated:YES];
+    }
+    
     if (streamer.duration)
 	{
 		double newSeekTime = (aSlider.value / 100.0) * streamer.duration;
 		[streamer seekToTime:newSeekTime];
     }
+}
+
+-(IBAction)clearTooltip:(id)sender
+{
+    [self.programTooltip dismissAnimated:YES];
+    self.programTooltip = nil;
+    self.tooltipAnchor = nil;
+}
+
+-(NSString*)getProgramForPos:(float)pos
+{
+    if (pos<10.0)
+    {
+        return @"Morning Edition";
+    }
+    else if (pos<30.0)
+    {
+        return @"Talk of the Nation";
+    }
+    else if (pos<50.0)
+    {
+        return @"Here and Now";
+    }
+    else return @"All Things Considered";
 }
 
 //

@@ -55,6 +55,21 @@
     
     [apvc didMoveToParentViewController:self];
     
+    // ARTICLE VIEW
+    BWCArticleViewController *bavc = [[BWCArticleViewController alloc] init];
+    
+    [self addChildViewController:bavc];
+    
+    bavc.view.center = self.view.center;
+    
+    frame = bavc.view.frame;
+    frame.origin.y = apvc.view.frame.origin.y + apvc.view.frame.size.height;
+    bavc.view.frame = frame;
+    
+    [self.view addSubview:bavc.view];
+    
+    [bavc didMoveToParentViewController:self];
+    
     // ON-DEMAND COLLECTION VIEW
     
     PinchLayout* pinchLayout = [[PinchLayout alloc] init];
@@ -72,22 +87,6 @@
     [self.view addSubview:bodvc.view];
     
     [bodvc didMoveToParentViewController:self];
-    
-    // ARTICLE VIEW
-    BWCArticleViewController *bavc = [[BWCArticleViewController alloc] init];
-    
-    [self addChildViewController:bavc];
-    
-    bavc.view.center = self.view.center;
-    
-    frame = bavc.view.frame;
-    frame.origin.y = apvc.view.frame.origin.y + apvc.view.frame.size.height + 25.0;
-    bavc.view.frame = frame;
-    
-    [self.view addSubview:bavc.view];
-    
-    [bavc didMoveToParentViewController:self];
-    
     
     UILabel *onDemandLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, bodvc.view.frame.origin.y-50.0, self.view.frame.size.width, 50.0)];
     [onDemandLabel setFont:[UIFont fontWithName:@"Futura" size:25.0]];
