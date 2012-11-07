@@ -45,6 +45,7 @@
 	NSMutableArray* messageArrayCollection;
 }
 
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withItems:(NSArray*)items;
 -(void)showViewInFullScreen:(UIViewExtention*)viewToShow withModel:(MessageModel*)model;
 -(void)closeFullScreen;
 -(void)buildPages:(NSArray*)messagesArray;
@@ -52,5 +53,6 @@
 @property (nonatomic, assign) NSMutableArray* viewControlerStack;
 @property (nonatomic, assign) UIGestureRecognizer* gestureRecognizer;
 @property (nonatomic, retain) NSString* wallTitle;
+@property (nonatomic, retain) NSArray *itemsToDisplay;
 
 @end

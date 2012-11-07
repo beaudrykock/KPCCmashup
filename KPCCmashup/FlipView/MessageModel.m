@@ -36,16 +36,16 @@
 @synthesize messageID;
 @synthesize content;
 @synthesize createdAt;
-@synthesize userName;
-@synthesize userImage;
+@synthesize title;
+@synthesize image;
 
 -(id)initWithMessageObject:(NSDictionary*)messageObject {
 	if (self = [super init]) {
 		self.messageID = (NSInteger)[[messageObject objectForKey:@"id"] intValue];
 		self.content = [messageObject objectForKey:@"content"];
 		self.createdAt = [messageObject objectForKey:@"created_at"];
-		self.userName = [messageObject objectForKey:@"userName"];
-		self.userImage = [messageObject objectForKey:@"userImage"];
+		self.title = [messageObject objectForKey:@"title"];
+		self.image = [messageObject objectForKey:@"image"];
 	}
 	return self;
 }
@@ -54,8 +54,8 @@
 - (void) dealloc {
 	[content release];
 	[createdAt release];
-	[userName release];
-	[userImage release];
+	[title release];
+	[image release];
 	[super dealloc];
 }
 

@@ -48,30 +48,49 @@
 #import "HeaderView.h"
 
 #import "MessageModel.h"
+#import "MWFeedItem.h"
+
+#import "NSString+HTML.h"
+#import "UIImageView+WebCache.h"
 
 @implementation WallViewController
 
-@synthesize viewControlerStack,gestureRecognizer,wallTitle;
+@synthesize viewControlerStack,gestureRecognizer,wallTitle, itemsToDisplay;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil withItems:(NSArray*)items {
    
     if ( self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		[self.view setBackgroundColor:[UIColor whiteColor]];
 		isInFullScreenMode = FALSE;
-		
+		self.itemsToDisplay=items;
+        
 		messageArrayCollection = [[NSMutableArray alloc] init];
-		
-		for (int i = 1; i <= 18; i++) {
-			
+		int i=0;
+        
+        for (MWFeedItem *item in itemsToDisplay) {
+        	
+            NSString *itemTitle = item.title ? [item.title stringByConvertingHTMLToPlainText] : @"[No Title]";
+            NSString *itemSummary = item.summary ? [item.summary stringByConvertingHTMLToPlainText] : @"[No Summary]";
+            NSString *dateString = @"";
+            
+            if (item.date) {
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateStyle:NSDateFormatterMediumStyle];
+                [formatter setTimeStyle:NSDateFormatterMediumStyle];
+                dateString = [formatter stringFromDate:item.date];
+                [formatter release];
+            }
+            
 			MessageModel* messageModel1 = [[MessageModel alloc] init];
 			messageModel1.messageID= i;
-			messageModel1.userName = @"Harry Potter";
-			messageModel1.userImage =  @"missing-people.png";
-			messageModel1.createdAt = @"06/07/2011 at 01:00 AM";
-			messageModel1.content = @"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+			messageModel1.title = itemTitle;
+			messageModel1.image =  item.imgURL;
+			messageModel1.createdAt = dateString;
+			messageModel1.content = itemSummary;
 			
 			[messageArrayCollection addObject:messageModel1];
 			[messageModel1 release];
+            i++;
 		}
 		
 		[self buildPages:messageArrayCollection];
@@ -200,7 +219,7 @@
 			
 			HeaderView* headerView = [[HeaderView alloc] initWithFrame:CGRectMake(0, 0, layoutToReturn.frame.size.width, 50)];
 			headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-			[headerView setWallTitleText:@"My Tweet"];
+			[headerView setWallTitleText:@"Latest News"];
 			[headerView setBackgroundColor:[UIColor whiteColor]];
 			[headerView rotate:self.interfaceOrientation animation:NO];
 			[layoutToReturn setHeaderView:headerView];
@@ -421,6 +440,7 @@
 		[fullScreenView release];
 	}
 	[wallTitle release];
+    [itemsToDisplay release];
     [super dealloc];
 }
 

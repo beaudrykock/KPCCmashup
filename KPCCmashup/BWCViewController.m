@@ -72,7 +72,7 @@
     [self.view addSubview:bodvc.view];
     
     [bodvc didMoveToParentViewController:self];
-    /*
+    
     // ARTICLE VIEW
     BWCArticleViewController *bavc = [[BWCArticleViewController alloc] init];
     
@@ -87,7 +87,7 @@
     [self.view addSubview:bavc.view];
     
     [bavc didMoveToParentViewController:self];
-    */
+    
     
     UILabel *onDemandLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, bodvc.view.frame.origin.y-50.0, self.view.frame.size.width, 50.0)];
     [onDemandLabel setFont:[UIFont fontWithName:@"Futura" size:25.0]];

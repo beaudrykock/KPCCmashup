@@ -31,6 +31,7 @@
 
 #import "TitleAndTextView.h"
 #import "MessageModel.h"
+#import "UIImageView+WebCache.h"
 
 @implementation TitleAndTextView
 
@@ -80,12 +81,13 @@
 	contentView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
 	userImageView = [[UIImageView alloc] init];
-	userImageView.image = [UIImage imageNamed:messageModel.userImage];
+    [userImageView setImageWithURL:[NSURL URLWithString:messageModel.image]
+                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
 	[userImageView setFrame:CGRectMake(10, 10, 50, 50)];
 	[contentView addSubview:userImageView];
 
 	userNameLabel = [[UILabel alloc] init];
-	[userNameLabel setText:[NSString stringWithFormat:@"%@",messageModel.userName]];
+	[userNameLabel setText:[NSString stringWithFormat:@"%@",messageModel.title]];
 	userNameLabel.font =[UIFont fontWithName:@"Helvetica" size:25];
 	[userNameLabel setTextColor:RGBCOLOR(2,90,177)];
 	[userNameLabel setBackgroundColor:[UIColor clearColor]];
