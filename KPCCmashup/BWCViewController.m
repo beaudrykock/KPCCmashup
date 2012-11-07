@@ -96,4 +96,9 @@
     [self.view addSubview:onDemandLabel];
 }
 
+-(BOOL)shouldAutorotate
+{
+    return NO;
+}
+
 @end
