@@ -47,12 +47,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "KPCCmashup/AudioPlayerViewController.m"
-         timestampString = "373925527.682335"
+         timestampString = "374003413.162147"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "355"
-         endingLineNumber = "355"
+         startingLineNumber = "394"
+         endingLineNumber = "394"
          landmarkName = "-updateProgress:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "KPCCmashup/AudioPlayerViewController.m"
+         timestampString = "373992902.793699"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "302"
+         endingLineNumber = "302"
+         landmarkName = "-sliderMoved:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

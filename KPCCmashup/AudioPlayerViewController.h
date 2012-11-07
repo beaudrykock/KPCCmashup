@@ -13,6 +13,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CMPopTipView.h"
 
 @class AudioStreamer, LevelMeterView;
 
@@ -31,6 +32,8 @@
     BOOL playing;
 }
 
+@property (nonatomic, retain) UIView *tooltipAnchor;
+@property (nonatomic, retain) CMPopTipView *programTooltip;
 @property (nonatomic, copy) NSString *downloadSourceURL;
 @property (retain) NSString* currentArtist;
 @property (retain) NSString* currentTitle;
