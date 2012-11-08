@@ -80,7 +80,7 @@
     
     frame = bodvc.view.frame;
     frame.origin.x = 0.0;
-    frame.size.height = 300.0;
+    frame.size.height = 150.0;
     frame.origin.y = self.view.frame.size.height-frame.size.height;
     bodvc.view.frame = frame;
     
